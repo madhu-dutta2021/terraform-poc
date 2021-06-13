@@ -10,3 +10,4 @@ resource "aws_vpc" "md_main_vpc" {
     Name = "md_main_vpc"
   }
 }
+
