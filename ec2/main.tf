@@ -1,6 +1,6 @@
 /* CREATE EC2 */
 resource "aws_instance" "md_web_ec2" {
-  count                  = 2
+  count                  = 1
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
   key_name               = var.key_name

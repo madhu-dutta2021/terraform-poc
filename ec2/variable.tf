@@ -18,23 +18,13 @@ variable "key_name" {
 variable "user_data" {
 
   default = <<-EOF
-
     #!/bin/bash
-
-    sudo yum update -y
-
-    sudo yum install httpd -y
-
-    service httpd start
-
-    chkconfig httpd on
-
-    cd /var/www/html
-
-    echo "<html><h1>Hello! Welcome To My Webpage</h1></html>" >
-
-    index.html
-
+            sudo yum update -y
+            sudo yum install httpd -y
+            service httpd start
+            chkconfig httpd on 
+            cd /var/www/html
+            echo "<html><body><h1>Hello Web server from Madhu :D </h1></body></html>" > index.html 
   EOF
 }
 
