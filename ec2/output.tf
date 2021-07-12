@@ -25,10 +25,12 @@ output "public_dns" {
 
 output "public_ip" {
   description = "List of public IP addresses assigned to the instances, if applicable"
-  value       = aws_instance.md_web_ec2.*.public_ip
+  # value       = aws_instance.md_web_ec2.*.public_ip
+  value = ["${aws_autoscaling_group.md_asg.arn}"]
 }
 
 output "ipv6_addresses" {
   description = "List of assigned IPv6 addresses of instances"
   value       = aws_instance.md_web_ec2.*.ipv6_addresses
 }
+
