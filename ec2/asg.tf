@@ -6,7 +6,8 @@ resource "aws_autoscaling_group" "md_asg" {
   health_check_type         = "ELB"
   desired_capacity          = 4
   force_delete              = true
-  launch_configuration      = "${aws_launch_configuration.md-first-launch-config.id}"
+  launch_configuration      = aws_launch_configuration.md-first-launch-config.id
+  load_balancers            = [aws_elb.md-first-elb.name]
   tag {
     key                 = "Name"
     value               = "md-tf-asg"

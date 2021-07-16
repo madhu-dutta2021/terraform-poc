@@ -26,7 +26,7 @@ output "public_dns" {
 output "public_ip" {
   description = "List of public IP addresses assigned to the instances, if applicable"
   # value       = aws_instance.md_web_ec2.*.public_ip
-  value = ["${aws_autoscaling_group.md_asg.arn}"]
+  value = [aws_autoscaling_group.md_asg.arn]
 }
 
 output "ipv6_addresses" {
@@ -34,3 +34,6 @@ output "ipv6_addresses" {
   value       = aws_instance.md_web_ec2.*.ipv6_addresses
 }
 
+output "DNS_name_elb" {
+  value = aws_elb.md-first-elb.dns_name
+}

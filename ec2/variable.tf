@@ -2,10 +2,10 @@ variable "region" {
   default = "us-east-1"
 }
 
-variable "inputEc2name" {
-  type        = string
-  description = "Enter the name of the EC2"
-}
+# variable "inputEc2name" {
+#   type        = string
+#   description = "Enter the name of the EC2"
+# }
 
 variable "azs" {
   default = ["us-east-1a", "us-east-1b", "us-east-1c"]

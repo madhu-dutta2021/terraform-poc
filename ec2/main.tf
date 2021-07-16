@@ -10,7 +10,7 @@ resource "aws_instance" "md_web_ec2" {
   # disable_api_termination = true
 
   tags = {
-    Name = "var.inputEc2name-${count.index}"
+    Name = "Webserver - ${count.index}"
   }
 
   //Userdata to install webserver config via bootstrap script
