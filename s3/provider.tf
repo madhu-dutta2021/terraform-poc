@@ -13,9 +13,3 @@ provider "aws" {
   region  = var.region
   profile = "default"
 }
-# Provider Block - 2  for us-west-1
-provider "aws" {
-  region  = var.region
-  profile = "default"
-  alias   = "us-west-1"
-}
